@@ -1,9 +1,7 @@
 html,body {	
 	margin:0;
 	padding:0;
-	height:100%;
 	font-family: 'Lato', sans-serif;
-	overflow-x: hidden;
 }
 
 #container {
@@ -20,24 +18,70 @@ html,body {
 #body {
 	text-align: center;
 	padding:0px;
-	padding-bottom:80px;	/* Height of the footer */
+	padding-bottom:0;	/* Height of the footer */
+}
+
+/*-------------------------------------------Side Navigation-------------------------------------------*/
+
+#vertical-nav{
+	width: 200px;
+	display: none;
+	position: fixed;
+	top: 10vh;
+	left: 30px;
+}
+
+#vertical-nav a{
+	color: white;
+	display: block;
+	text-decoration: none;
+	margin-top: 100px;
+	font-size: 30px;
+}
+
+#vertical-nav a:hover{
+	color: green;
+}
+
+#vertical-nav a:active{
+	color: greenyellow;
+}
+
+@media (min-width: 1030px){
+	#mySidenav{
+		display: none;
+	}
+	
+	#toggle{
+		display: none;
+	}
+	
+	#vertical-nav{
+		display: block;
+	}
+}
+
+/*-------------------------------------------Mobile Side Navigation-------------------------------------------*/
+
+.menu{
+	z-index: 40;
+	position: absolute;
 }
 
 #toggle {
 	color: white;
-	position: relative;
-	left: 30px;
-	position: absolute;
+	left: 20px;
+	position: fixed;
 }
 
 .sidenav {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 10;
+    z-index: 60;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: black;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -47,13 +91,13 @@ html,body {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: white;
     display: block;
     transition: 0.3s;
 }
 
 .sidenav a:hover {
-    color: #f1f1f1;
+    color: green;
 }
 
 .sidenav .closebtn {
@@ -69,17 +113,387 @@ html,body {
   .sidenav a {font-size: 18px;}
 }
 
-#parallax1 {
-	background-image: url(parrallax1.png);
+/*-------------------------------------------Parallax-------------------------------------------*/
+
+#parallax-container {
+	position: fixed;
+	overflow: visible;
+	width: 100%;
 	height: 100vh;
-	z-index: 1;
+	display: none;
+}
+.parallax-layer {
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-position: bottom center;
+}
+.layer-0 {
+	z-index: 4;
+	background: url('images/parallax/layer-0.png');
 }
 
-#parallax2 {
-	background-image: url(parallax2.png);
-	height: 100vh;
+.layer-1 {
+	z-index: 5;
+	background-image: url('images/parallax/layer-1.png');
+}
+.layer-2 {
+	z-index: 10;
+	background-image: url('images/parallax/layer-2.png');
+}
+.layer-3 {
+	z-index: 15;
+	background-image: url('images/parallax/layer-3.png');
+}
+
+.layer-3-2 {
+	z-index: 16;
+}
+
+#intro-video {
 	position: absolute;
-	z-index: 11;
+	top: -580px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
 }
 
+.layer-4 {
+	z-index: 20;
+	background-image: url('images/parallax/layer-4.png');
+}
+.layer-5 {
+	z-index: 25;
+	background-image: url('images/parallax/layer-5.png');
+}
+.layer-6 {
+	z-index: 30;
+	background-image: url('images/parallax/layer-6.png');
+}
+.layer-7 {
+	z-index: 35;
+	background-image: url('images/parallax/layer-7.png');
+}
+
+.content {
+	position: absolute;
+	top: 100vh;
+	width: 100%;
+	min-height: 1500px;
+	text-align: center;
+}
+
+/*-------------------------------------------Mobile non-parallax-------------------------------------------*/
+
+#mobile-art {
+	position: relative;
+	background-image: url(images/parallax-mobile.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	z-index: 10;
+	height: 100vh;
+}
+
+#mobile-video{
+	position: absolute;
+	top: -420px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+@media (min-width: 601px){
+	#mobile-art {
+		display: none;
+	}
+	
+	#mobile-video{
+		display: none;
+	}
+	
+	#parallax-container{
+		display: block;
+	}
+	
+}
+
+/*-------------------------------------------About Section-------------------------------------------*/
+
+#about-section{
+	padding-top: 70px;
+	padding-bottom: 70px;
+	background-color: black;
+}
+
+.about-heading{
+	color: White;
+	font-size: 40px;
+	margin-top: 30px
+}
+
+.about-img{
+	width: 320px;
+	border-radius: 50%;
+	margin-top: 30px;
+}
+
+#about-paragraph {
+	width: 75%;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 30px;
+	color: white;
+	padding: 20px;
+	border-radius: 25px;
+	border: 3px white solid;
+}
+
+#skill-show{
+	width: 320px;
+	margin: 0 auto;
+	color: white;
+	font-size: 20px;
+	text-align: left;
+	padding: 20px;
+	border-radius: 25px;
+	border: 3px solid white;
+}
+
+/*-------------------------------------------Portfolio Section-------------------------------------------*/
+
+#portfolio-section{
+	background-color: #343A40;
+	padding-top: 50px;
+	padding-bottom: 70px;
+}
+
+#portfolio-heading{
+	text-align: center;
+	color: white;
+	padding-bottom: 30px;
+	font-size: 30px;
+}
+
+#project-container {
+	width: 80%;
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	-webkit-flex-flow: row wrap;
+	justify-content: space-around;
+}
+
+.project-box {
+	background: black;
+	padding: 5px;
+	width: 286px;
+	height: 400px;
+	margin-top: 30px;
+	color: white;
+	padding-bottom: 20px;
+	min-width: 320px;
+	position: relative;
+}
+
+.project-img {
+	width: 100%;
+	height: 180px;
+	position: relative;
+}
+
+.inner p{
+	position: relative;
+	height: 95px;
+}
+
+.inner h3 {
+	position: relative;
+}
+			
+/*animation element*/
+
+.animation-element {
+  position: relative;
+}
+
+/*bounce up animation for the subject*/
+
+.bounce-up {
+	opacity: 0;
+	-moz-transition: all 700ms ease-out;
+	-webkit-transition: all 700ms ease-out;
+	-o-transition: all 700ms ease-out;
+	transition: all 700ms ease-out;
+	-moz-transform: translate3d(0px, 200px, 0px);
+	-webkit-transform: translate3d(0px, 200px, 0px);
+	-o-transform: translate(0px, 200px);
+	-ms-transform: translate(0px, 200px);
+	transform: translate3d(0px, 200, 0px);
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.bounce-up.in-view {
+	opacity: 1;
+	-moz-transform: translate3d(0px, 0px, 0px);
+	-webkit-transform: translate3d(0px, 0px, 0px);
+	-o-transform: translate(0px, 0px);
+	-ms-transform: translate(0px, 0px);
+	transform: translate3d(0px, 0px, 0px);
+}
+
+/*-------------------------------------------Contact Section-------------------------------------------*/
+
+#contact-section{
+	background-color: black;
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+
+#contact-container {
+	padding: 20px;
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 50px;
+	color: white;
+	font-size: 17px;
+}
+
+/* Style inputs, select elements and textareas */
+input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+/* Style inputs, select elements and textareas */
+input[type=email], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+/* Style the label to display next to the inputs */
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+/* Style the submit button */
+input[type=submit] {
+	background-color: white;
+	color: black;
+	padding: 12px 20px;
+	border: none;
+	cursor: pointer;
+	float: right;
+	margin-top: 20px;
+}
+
+/* Style the submit button */
+input[type=submit]:hover {
+	background-color: #0CA087;
+	color: white;
+	border: 2px white solid; 
+}
+
+/* Style the container */
+.container {
+	background-color: #0CA087;
+	padding: 20px;
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 50px;
+	color: white;
+	font-size: 17px;
+}
+
+/* Floating column for labels: 25% width */
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+	.g-recaptcha {
+		margin-bottom: 15px;
+	}
+	
+}
+
+@media only screen and (min-width: 600px) {
+	
+	#mobile-logo-header {
+		display: none;
+	}
+	
+	#logo-header {
+		height: 200px;
+    	margin: 0 auto;
+    	width: 600px;
+    	display: table;
+		text-align: center;
+	}
+	
+	#stay-connected {
+		width: 300px;
+		height: auto;
+		border: 3px white solid;
+		text-align: center;
+		display: inline-block;
+		position: relative;
+		overflow: hidden;
+		top: 10px;
+		padding-bottom: 20px;
+		margin-left: 60px;
+	}
+	
+}
+
+@media only screen and (min-width: 860px) {
+	.container, #public-speaking-box {
+		width: 50%;
+	}
+	
+	#public-speaking-box a{
+		top: 30px;
+	}
+}
 

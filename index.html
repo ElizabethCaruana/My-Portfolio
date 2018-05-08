@@ -12,6 +12,12 @@
 		<div id="container">
 			<div id="header">
 				<nav class="menu">
+					<div id="vertical-nav">
+						<a href="#" class="active">Home</a>
+						<a href="#">About</a>
+						<a href="#">Portfolio</a>
+						<a href="#">Contact</a>
+					</div>
 					<div id="mySidenav" class="sidenav">
 						<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 						<a href="#">Home</a>
@@ -21,18 +27,120 @@
 					</div>
 					<span id="toggle" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 				</nav>
-				<div id="parallax">
-					<div id="parallax1" class="parallax-layer">
+				<div id="mobile-art">
+					<video id="mobile-video" width="340" onloadeddata="this.play();" playsinline muted>
+						<source src="images/intro-video.mp4" type="video/mp4" />
+						Your browser does not support the video tag or the file format of this video.
+					</video>
+				</div>
+				
+				<div id="parallax-container">
+					<div class="parallax-layer layer-0" data-parallax-speed="0.05" data-max-scroll="565"></div>
+					<div class="parallax-layer layer-1" data-parallax-speed="0.1" data-max-scroll="565"></div>
+					<div class="parallax-layer layer-2" data-parallax-speed="0.3" data-max-scroll="565"></div>
+					<div class="parallax-layer layer-3" data-parallax-speed="0.3" data-max-scroll="565"></div>
+					<div class="parallax-layer layer-3-2" data-parallax-speed="0.3" data-max-scroll="565">
+						<video id="intro-video" width="500" onloadeddata="this.play();" playsinline muted>
+							<source src="images/intro-video.mp4" type="video/mp4" />
+							Your browser does not support the video tag or the file format of this video.
+						</video>
+						
 					</div>
-					<div id="parallax2" class="parallax-layer">
+					<div class="parallax-layer layer-4" data-parallax-speed="0.4" data-max-scroll="565"></div>
+					<div class="parallax-layer layer-5" data-parallax-speed="0.5" data-max-scroll="565"></div>
+					<div class="parallax-layer layer-6" data-parallax-speed="0.6" data-max-scroll="565"></div>
+					<div class="parallax-layer layer-7" data-parallax-speed="0.7" data-max-scroll="565"></div>
+				</div>	  
+			</div>
+			<div id="body" class="content">
+				<div id="about-section">
+					<div class="about-heading">About Me</div>
+					<img class="about-img" src="images/zoo.jpg">
+					<p id="about-paragraph">Vivamus at molestie purus, nec congue dolor. Aliquam ut bibendum nibh, ac egestas tortor. Vestibulum pharetra eros sed augue blandit, sagittis efficitur eros auctor. Phasellus eget sem commodo, luctus arcu ut, venenatis nisi. Proin ut ullamcorper mi. Morbi volutpat sit amet felis et volutpat. Nam facilisis libero a nunc vulputate convallis. Curabitur nec nulla vestibulum, congue tortor vitae, laoreet augue. Aenean scelerisque, ligula non molestie venenatis, massa sem fringilla dolor, eget semper justo mauris in neque. Donec ut nunc ac tellus maximus pharetra ac sit amet tellus. Quisque dignissim quis ex in condimentum. Sed vehicula euismod ligula ac congue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus accumsan lorem sit amet ligula venenatis placerat. Nunc consectetur pharetra nunc et aliquet.</p>
+					<img class="about-img" src="images/wedding.jpg">
+					<div class="about-heading">Skills</div>
+					<div id="skill-show">
+						<p><strong>Languages:</strong> HTML, CSS, Javascript, jQuery</p>
+						<p><strong>CMS:</strong> Wordpress</p>
+						<p><strong>Dev Tools:</strong> Bootstrap, Github</p>
+					</div>
+				</div>
+				<div id="portfolio-section">
+					<div id="portfolio-heading">Check out some of my projects below:</div>
+					<div id="project-container">
+						<div class="project-box animation-element bounce-up">
+							<img class="project-img" src="images/card-img.png">
+							<div class="inner">
+								<h3>Project Title</h3>
+								<p>Sed commodo, dui et imperdiet porta, dolor dui faucibus nisi, ac condimentum velit massa consectetur libero. Sed tincidunt dui quis odio blandit rhoncus. </p>
+								<div class="button">View</div>
+							</div> 
+						</div>
+						<div class="project-box animation-element bounce-up">
+							<img class="project-img" src="images/card-img.png">
+							<div class="inner">
+								<h3>Project Title</h3>
+								<p>Sed commodo, dui et imperdiet porta, dolor dui faucibus nisi, ac condimentum velit massa consectetur libero. Sed tincidunt dui quis odio blandit rhoncus. </p>
+								<div class="button">View</div>
+							</div> 
+						</div>
+						<div class="project-box animation-element bounce-up">
+							<img class="project-img" src="images/card-img.png">
+							<div class="inner">
+								<h3>Project Title</h3>
+								<p>Sed commodo, dui et imperdiet porta, dolor dui faucibus nisi, ac condimentum velit massa consectetur libero. Sed tincidunt dui quis odio blandit rhoncus. </p>
+								<div class="button">View</div>
+							</div> 
+						</div>
+					</div>
+				</div>
+				<div id="contact-section">
+					<div id="contact-container">
+						<form name="contactform" method="post" action="send_form_email.php">
+							<div class="row">
+								<div class="col-25">
+									<label for="first_name">First Name:</label>
+								</div>
+								<div class="col-75">
+									<input type="text" name="first_name" placeholder="Your name">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-25">
+									<label for="last_name">Last Name:</label>
+								</div>
+								<div class="col-75">
+									<input type="text" name="last_name" placeholder="Your last name">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-25">
+									<label for="email">Email:</label>
+								</div>
+								<div class="col-75">
+									<input type="email" name="email" placeholder="Your email">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-25">
+									<label for="comments">Message:</label>
+								</div>
+								<div class="col-75">
+									<textarea name="comments" placeholder="Write your message here" style="height:200px"></textarea>
+								</div>
+							</div>
+							<div class="row">
+								<input type="submit" value="Submit">
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>
-			<div id="body">
-			</div>
 			<div id="footer">
+				
 			</div>
 		</div>
+		<script src="js/parallax.js"></script>
 		<script>
 			function openNav() {
 				document.getElementById("mySidenav").style.width = "250px";
@@ -40,7 +148,34 @@
 
 			function closeNav() {
 				document.getElementById("mySidenav").style.width = "0";
-			}	
+			}
+			
+			var $animation_elements = $('.animation-element');
+			var $window = $(window);
+
+			function check_if_in_view() {
+				var window_height = $window.height();
+				var window_top_position = $window.scrollTop();
+				var window_bottom_position = (window_top_position + window_height);
+
+				$.each($animation_elements, function() {
+					var $element = $(this);
+					var element_height = $element.outerHeight();
+					var element_top_position = $element.offset().top;
+					var element_bottom_position = (element_top_position + element_height);
+
+					//check to see if this current container is within viewport
+					if ((element_bottom_position >= window_top_position) &&
+					(element_top_position <= window_bottom_position)) {
+						$element.addClass('in-view');
+					} else {
+						$element.removeClass('in-view');
+					}
+				});
+			}
+
+			$window.on('scroll resize', check_if_in_view);
+			$window.trigger('scroll');
 		</script>
 	</body>
 </html>
