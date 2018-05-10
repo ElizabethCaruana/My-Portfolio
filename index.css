@@ -32,7 +32,7 @@ html,body {
 }
 
 #vertical-nav a{
-	color: white;
+	color: blue;
 	display: block;
 	text-decoration: none;
 	margin-top: 100px;
@@ -41,6 +41,7 @@ html,body {
 
 #vertical-nav a:hover{
 	color: green;
+	cursor: pointer;
 }
 
 #vertical-nav a:active{
@@ -228,6 +229,7 @@ html,body {
 	padding-top: 70px;
 	padding-bottom: 70px;
 	background-color: black;
+	height: auto;
 }
 
 .about-heading{
@@ -238,7 +240,6 @@ html,body {
 
 .about-img{
 	width: 320px;
-	border-radius: 50%;
 	margin-top: 30px;
 }
 
@@ -249,8 +250,6 @@ html,body {
 	margin-top: 30px;
 	color: white;
 	padding: 20px;
-	border-radius: 25px;
-	border: 3px white solid;
 }
 
 #skill-show{
@@ -260,16 +259,136 @@ html,body {
 	font-size: 20px;
 	text-align: left;
 	padding: 20px;
-	border-radius: 25px;
-	border: 3px solid white;
 }
+
+@media only screen and (min-width: 1030px){
+	#about-section{
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	
+	#about-container{
+		margin: 0 auto;
+		width: 75%;
+	}
+	
+	#about-img-1{
+		float: left;
+	}
+	
+	#about-paragraph{
+		float: right;
+		width: 50%;
+		text-align: right;
+		margin-top: 0;
+	}
+	
+	#skill-container{
+		margin: 0 auto;
+		width: 75%;
+	}
+	
+	#skill-show{
+		float: left;
+		width: 50%;
+	}
+	
+	#about-img-2{
+		float: right;
+	}
+	
+	.about-heading{
+		margin-top: 0;
+	}
+}
+
+@media only screen and (min-width: 1520px){
+
+	#about-container{
+		width: 60%;
+	}
+	
+	#about-paragraph{
+		width: 60%;
+	}
+	
+	#skill-container{
+		width: 60%;
+	}
+	
+	#skill-show{
+		width: 50%;
+	}
+}
+
+/*animation element*/
+
+.animation-element {
+  position: relative;
+}
+
+/*slide right animation*/
+
+.slide-right {
+	opacity: 0;
+	-moz-transition: all 700ms ease-out;
+	-webkit-transition: all 700ms ease-out;
+	-o-transition: all 700ms ease-out;
+	transition: all 700ms ease-out;
+	-moz-transform: translate3d(200px, 0px, 0px);
+	-webkit-transform: translate3d(200px, 0px, 0px);
+	-o-transform: translate(200px, 0px);
+	-ms-transform: translate(200px, 0px);
+	transform: translate3d(200px, 0, 0px);
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.slide-right.in-view {
+	opacity: 1;
+	-moz-transform: translate3d(0px, 0px, 0px);
+	-webkit-transform: translate3d(0px, 0px, 0px);
+	-o-transform: translate(0px, 0px);
+	-ms-transform: translate(0px, 0px);
+	transform: translate3d(0px, 0px, 0px);
+}
+
+/*slide left animation*/
+
+.slide-left {
+	opacity: 0;
+	-moz-transition: all 700ms ease-out;
+	-webkit-transition: all 700ms ease-out;
+	-o-transition: all 700ms ease-out;
+	transition: all 700ms ease-out;
+	-moz-transform: translate3d(-200px, 0px, 0px);
+	-webkit-transform: translate3d(-200px, 0px, 0px);
+	-o-transform: translate(-200px, 0px);
+	-ms-transform: translate(-200px, 0px);
+	transform: translate3d(-200px, 0, 0px);
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.slide-left.in-view {
+	opacity: 1;
+	-moz-transform: translate3d(0px, 0px, 0px);
+	-webkit-transform: translate3d(0px, 0px, 0px);
+	-o-transform: translate(0px, 0px);
+	-ms-transform: translate(0px, 0px);
+	transform: translate3d(0px, 0px, 0px);
+}
+
 
 /*-------------------------------------------Portfolio Section-------------------------------------------*/
 
 #portfolio-section{
-	background-color: #343A40;
+	background-color: green;
 	padding-top: 50px;
 	padding-bottom: 70px;
+	clear: both;	
 }
 
 #portfolio-heading{

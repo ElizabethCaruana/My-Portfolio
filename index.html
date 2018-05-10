@@ -13,17 +13,17 @@
 			<div id="header">
 				<nav class="menu">
 					<div id="vertical-nav">
-						<a href="#" class="active">Home</a>
-						<a href="#">About</a>
-						<a href="#">Portfolio</a>
-						<a href="#">Contact</a>
+						<a onclick="topFunction()" id="home-link">Home</a>
+						<a href="#about-section">About</a>
+						<a href="#portfolio-section">Portfolio</a>
+						<a href="#contact-section">Contact</a>
 					</div>
 					<div id="mySidenav" class="sidenav">
 						<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-						<a href="#">Home</a>
-						<a href="#">About</a>
-						<a href="#">Portfolio</a>
-						<a href="#">Contact</a>
+						<a onclick="topFunction()" id="home-link">Home</a>
+						<a href="#about-section">About</a>
+						<a href="#portfolio-section">Portfolio</a>
+						<a href="#contact-section">Contact</a>
 					</div>
 					<span id="toggle" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 				</nav>
@@ -54,15 +54,22 @@
 			</div>
 			<div id="body" class="content">
 				<div id="about-section">
-					<div class="about-heading">About Me</div>
-					<img class="about-img" src="images/zoo.jpg">
-					<p id="about-paragraph">Vivamus at molestie purus, nec congue dolor. Aliquam ut bibendum nibh, ac egestas tortor. Vestibulum pharetra eros sed augue blandit, sagittis efficitur eros auctor. Phasellus eget sem commodo, luctus arcu ut, venenatis nisi. Proin ut ullamcorper mi. Morbi volutpat sit amet felis et volutpat. Nam facilisis libero a nunc vulputate convallis. Curabitur nec nulla vestibulum, congue tortor vitae, laoreet augue. Aenean scelerisque, ligula non molestie venenatis, massa sem fringilla dolor, eget semper justo mauris in neque. Donec ut nunc ac tellus maximus pharetra ac sit amet tellus. Quisque dignissim quis ex in condimentum. Sed vehicula euismod ligula ac congue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus accumsan lorem sit amet ligula venenatis placerat. Nunc consectetur pharetra nunc et aliquet.</p>
-					<img class="about-img" src="images/wedding.jpg">
-					<div class="about-heading">Skills</div>
-					<div id="skill-show">
-						<p><strong>Languages:</strong> HTML, CSS, Javascript, jQuery</p>
-						<p><strong>CMS:</strong> Wordpress</p>
-						<p><strong>Dev Tools:</strong> Bootstrap, Github</p>
+					<div id="about-container">
+						<img class="about-img" id="about-img-1" src="images/zoo.jpg">
+						<div id="about-paragraph" class="slide-right animation-element">
+							<div class="about-heading">About Me</div>
+							<p>Vivamus at molestie purus, nec congue dolor. Aliquam ut bibendum nibh, ac egestas tortor. Vestibulum pharetra eros sed augue blandit, sagittis efficitur eros auctor. Phasellus eget sem commodo, luctus arcu ut, venenatis nisi. Proin ut ullamcorper mi. Morbi volutpat sit amet felis et volutpat. Nam facilisis libero a nunc vulputate convallis. Curabitur nec nulla vestibulum, congue tortor vitae, laoreet augue. Aenean scelerisque, ligula non molestie venenatis, massa sem fringilla dolor, eget semper justo mauris in neque. Donec ut nunc ac tellus maximus pharetra ac sit amet tellus. Quisque dignissim quis ex in condimentum. Sed vehicula euismod ligula ac congue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus accumsan lorem sit amet ligula venenatis placerat. Nunc consectetur pharetra nunc et aliquet.</p>
+						</div>
+					</div>
+					<div style="clear: both;"></div>
+					<div id="skill-container">
+						<img class="about-img" id="about-img-2" src="images/wedding.jpg">
+						<div id="skill-show" class="slide-left animation-element">
+							<div class="about-heading">Skills</div>
+							<p><strong>Languages:</strong> HTML, CSS, Javascript, jQuery</p>
+							<p><strong>CMS:</strong> Wordpress</p>
+							<p><strong>Dev Tools:</strong> Bootstrap, Github</p>
+						</div>
 					</div>
 				</div>
 				<div id="portfolio-section">
@@ -148,6 +155,11 @@
 
 			function closeNav() {
 				document.getElementById("mySidenav").style.width = "0";
+			}
+			
+			function topFunction() {
+				document.body.scrollTop = 0;
+				document.documentElement.scrollTop = 0;
 			}
 			
 			var $animation_elements = $('.animation-element');
