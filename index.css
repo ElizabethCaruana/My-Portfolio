@@ -228,14 +228,15 @@ html,body {
 #about-section{
 	padding-top: 70px;
 	padding-bottom: 70px;
-	background-color: black;
+	background-color: white;
 	height: auto;
 }
 
 .about-heading{
-	color: White;
+	color: green;
 	font-size: 40px;
-	margin-top: 30px
+	margin-top: 30px;
+	text-align: center;
 }
 
 .about-img{
@@ -244,21 +245,32 @@ html,body {
 }
 
 #about-paragraph {
-	width: 75%;
+	width: 320px;
 	text-align: center;
 	margin: 0 auto;
 	margin-top: 30px;
-	color: white;
+	color: black;
 	padding: 20px;
 }
 
 #skill-show{
 	width: 320px;
 	margin: 0 auto;
-	color: white;
+	color: black;
 	font-size: 20px;
 	text-align: left;
 	padding: 20px;
+}
+
+@media only screen and (min-width: 600px){
+	#about-paragraph{
+		width: 75%;
+	}
+	
+	#skill-show{
+		margin: 0 auto;
+		width: 370px;
+	}
 }
 
 @media only screen and (min-width: 1030px){
@@ -385,7 +397,7 @@ html,body {
 /*-------------------------------------------Portfolio Section-------------------------------------------*/
 
 #portfolio-section{
-	background-color: green;
+	background-color: #FAFAFA;
 	padding-top: 50px;
 	padding-bottom: 70px;
 	clear: both;	
@@ -393,7 +405,7 @@ html,body {
 
 #portfolio-heading{
 	text-align: center;
-	color: white;
+	color: green;
 	padding-bottom: 30px;
 	font-size: 30px;
 }
@@ -415,12 +427,12 @@ html,body {
 }
 
 .project-box {
-	background: black;
+	background: #6E6D6F;
 	padding: 5px;
 	width: 286px;
 	height: 400px;
 	margin-top: 30px;
-	color: white;
+	color: black;
 	padding-bottom: 20px;
 	min-width: 320px;
 	position: relative;
@@ -439,6 +451,18 @@ html,body {
 
 .inner h3 {
 	position: relative;
+}
+
+.button{
+	text-decoration: none;
+	border: 1px solid black;
+	padding: 10px 20px;
+	color: black;
+}
+
+.button:hover{
+	background-color: black;
+	color: #6E6D6F;
 }
 			
 /*animation element*/
@@ -477,25 +501,16 @@ html,body {
 /*-------------------------------------------Contact Section-------------------------------------------*/
 
 #contact-section{
-	background-color: black;
+	background-color: white;
 	padding-top: 70px;
 	padding-bottom: 70px;
-}
-
-#contact-container {
-	padding: 20px;
-	width: 80%;
-	margin: 0 auto;
-	margin-top: 50px;
-	color: white;
-	font-size: 17px;
 }
 
 /* Style inputs, select elements and textareas */
 input[type=text], select, textarea{
   width: 100%;
   padding: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid black;
   box-sizing: border-box;
   resize: vertical;
 }
@@ -504,7 +519,7 @@ input[type=text], select, textarea{
 input[type=email], select, textarea{
   width: 100%;
   padding: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid black;
   box-sizing: border-box;
   resize: vertical;
 }
@@ -520,7 +535,7 @@ input[type=submit] {
 	background-color: white;
 	color: black;
 	padding: 12px 20px;
-	border: none;
+	border: 1px black solid;
 	cursor: pointer;
 	float: right;
 	margin-top: 20px;
@@ -528,19 +543,17 @@ input[type=submit] {
 
 /* Style the submit button */
 input[type=submit]:hover {
-	background-color: #0CA087;
-	color: white;
-	border: 2px white solid; 
+	background-color: black;
+	color: white; 
 }
 
 /* Style the container */
-.container {
-	background-color: #0CA087;
+#contact-container {
 	padding: 20px;
 	width: 80%;
 	margin: 0 auto;
 	margin-top: 50px;
-	color: white;
+	color: black;
 	font-size: 17px;
 }
 
@@ -577,42 +590,9 @@ input[type=submit]:hover {
 	
 }
 
-@media only screen and (min-width: 600px) {
-	
-	#mobile-logo-header {
-		display: none;
-	}
-	
-	#logo-header {
-		height: 200px;
-    	margin: 0 auto;
-    	width: 600px;
-    	display: table;
-		text-align: center;
-	}
-	
-	#stay-connected {
-		width: 300px;
-		height: auto;
-		border: 3px white solid;
-		text-align: center;
-		display: inline-block;
-		position: relative;
-		overflow: hidden;
-		top: 10px;
-		padding-bottom: 20px;
-		margin-left: 60px;
-	}
-	
-}
-
 @media only screen and (min-width: 860px) {
-	.container, #public-speaking-box {
+	.container{
 		width: 50%;
-	}
-	
-	#public-speaking-box a{
-		top: 30px;
 	}
 }
 
